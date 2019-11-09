@@ -1,0 +1,20 @@
+{
+  "name": "Graphql-movieql",
+  "version": "1.0.0",
+  "description": "Move API with Graphql",
+  "main": "index.js",
+  "repository": "https://github.com/GuGu99/Graphql-movieql",
+  "author": "GUGU99",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1"
+  }
+}
