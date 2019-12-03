@@ -1,13 +1,11 @@
-const gugu = {
-    name: "Gugu",
-    age: 19,
-    gender: "male"
-}
+import { people, getById } from './db';
 
 const resolvers = {
     Query: {
-        preson: () => gugu
+        people:() => people,
+        person:() => getById()
     }
 };
 
 export default resolvers;
+ 
