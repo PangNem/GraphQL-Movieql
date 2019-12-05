@@ -22,21 +22,11 @@ let movies = [
 ];
 
 
-export const getMovie = () => movies;
+export const getMovies = () => movies;
 
 export const getById = id => {
     const filterdMovies = movies.filter(movie => movie.id === id);
     return filterdMovies[0];
-};
-
-export const deleteMovie = id => {
-    const cleanedMovies = movies.filter(movie => movie.id !== id);
-    if (movie.length > cleanedMovies.length){
-        movie = cleanedMovies;
-        return true;
-    } else {
-        return false;
-    }
 };
 
 export const addMovie = (name, score) => {
@@ -46,5 +36,16 @@ export const addMovie = (name, score) => {
         score
     };
     movies.push(newMovie);
-    return movies;
+    return newMovie;
 };
+
+export const deleteMovie = id => {
+  const cleanedMovies = movies.filter(movie => movie.id !== id);
+  if (movies.length >= cleanedMovies.length) {
+    movies = cleanedMovies;
+    return true;
+  } else {
+    return false;
+  }
+};
+
