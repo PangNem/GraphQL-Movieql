@@ -14,5 +14,5 @@ type Query{
   status: String!
   movies(limit: Int, rating: Float): [Movie]!
   movie(id: Int!): Movie!
-  suggest(id: Int!): Movie!
+  suggest(id: Int!): [Movie]!
 }
